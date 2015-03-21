@@ -1,0 +1,14 @@
+{{define "content"}}
+	<form method="post">
+		<h2>Pick category</h2>
+		{{range $item := .MessageTypes}}
+			<label><input type="checkbox" name="category[]" value="{{$item.ID}}"> {{$item.Title}}</label>
+		{{end}}
+		<h2>Describe what you want</h2>
+		<input type="text" name="title" placeholder="Enter headline here" />
+		<textarea name="description"></textarea>
+		<input type="text" name="location" placeholder="Location" />
+		<input type="file" name="photo" />
+		<button type="submit">Preview your message</button>
+	</form>
+{{end}}
