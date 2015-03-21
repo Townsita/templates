@@ -1,6 +1,8 @@
 {{define "content"}}
 	<h2>What type of message do you want to send?</h2>
 	<ul>
-		<li><a href="#">Make love connection</a></li>
+		{{range $item := .MessageTypes}}
+		<li><a href="/message/new/{{$item.ID}}/{{slug $item.Title}}">{{$item.Title}}</a></li>
+		{{end}}
 	</ul>
 {{end}}
