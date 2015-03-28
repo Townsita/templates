@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{if .Subtitle}}{{.Subtitle}}: {{end}}{{.Title}}</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{if .Subtitle}}{{.Subtitle}}: {{end}}{{.Title}}</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
+<body>
 	{{ if .Analytics}}
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -16,13 +19,18 @@
 		ga('send', 'pageview');
 	</script>
 	{{ end }}
-	<header>
-		<h1><a href="/">{{ .Title }}</a></h1>
-	</header>
-	{{template "content" .}}
-	<footer>
-		Footer
-	</footer>
-<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<h1><a href="/">{{ .Title }}</a></h1>
+			</div>
+			<div class="col-md-10">
+				{{template "content" .}}
+			</div>
+		</div>
+		<footer class="row">
+			Footer
+		</footer>
+	</div>
 </body>
 </html>
