@@ -1,0 +1,15 @@
+{{define "content"}}
+	<h2>Received messages</h2>
+	{{range $message := .ReceivedMessages}}
+		{{template "message" $message}}
+	{{end}}
+	<h2>Sent messages</h2>
+	{{range $message := .ReceivedMessages}}
+		{{template "message" $message}}
+	{{end}}
+{{end}}
+
+{{define "message"}}
+	<h3><a href="/message/view/{{.ID}}">{{.Headline}}</a></h3>
+	<p>{{..Body}}</p>
+{{end}}
