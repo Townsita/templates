@@ -10,6 +10,6 @@
 {{end}}
 
 {{define "message"}}
-	<h3><a href="/message/view/{{.ID}}">{{.Headline}}</a></h3>
+	<h3><a href="/message/view/{{.ID}}/{{slug .Headline}}">{{.Headline}}</a></h3>
 	<p>{{..Body}}</p>
 {{end}}
