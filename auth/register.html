@@ -1,18 +1,24 @@
 {{define "content"}}
-	<h2>Register</h2>
-	<form method="post">
-		<div class="form-group">
-			<label for="email">Email</label>
-			<input class="form-control" type="text" id="email" name="email" />
+		<div class="container">
+			{{template "login-head" .}}
+			<div class="login-container col-md-4">
+				<h3>Sign up</h3>
+				<form method="post">
+					<input type="text" placeholder="Email" class="full-width">	
+					<input type="password" placeholder="Password" class="full-width">	
+					<input type="password" placeholder="Confirm password" class="full-width">
+					<input type="date" placeholder="Birthdate" class="full-width">			
+					<input type="radio" name="gender" value="male" id="male"> <label for="male">Male</label><br>
+					<input type="radio" name="gender" value="fe-male" id="female"> <label for="female">Female</label><br>
+					<input type="submit" value="Join!" class="full-width">
+				<form>
+				<p>You've already an account?<br><a href="">Log in</a> to <span class="luckdrum">Luckdrum</span></p>
+			</div>
+			<div class="col-md-4 login-fill">
+				
+			</div>
+			<div class="col-md-4 login-fill">
+				
+			</div>
 		</div>
-		<div class="form-group">
-			<label for="password">Password</label>
-			<input class="form-control" type="password" id="password" name="password" />
-		</div>
-		<div class="form-group">
-			<label for="confirm-password">Confirm Password</label>
-			<input class="form-control" type="password" id="confirm-password" name="confirm-password" />
-		</div>
-		<button type="submit" class="btn btn-primary">Register</button>
-	</form>
 {{end}}

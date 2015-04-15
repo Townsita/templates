@@ -1,15 +1,21 @@
 {{define "content"}}
-	<h2>Login</h2>
-	<form method="post">
-		<div class="form-group">
-			<label for="username">User</label>
-			<input class="form-control" type="text" id="username" name="username" />
+		<div class="container">
+			{{template "login-head" .}}
+			<div class="login-container col-md-4">
+				<h3>Log in</h3>	
+				<form method="post">
+					<input type="text" placeholder="Email" class="full-width">	
+					<input type="password" placeholder="Password" class="full-width">	
+					<input type="submit" value="Enter" class="full-width">
+				<form>
+				<p>You don't have an account?<br><a href="">Sign up</a> now!</p>
+				<p>Lost your password?<br><a href="">Order</a> a new one!</p>
+			</div>
+			<div class="col-md-4 login-fill">
+				
+			</div>
+			<div class="col-md-4 login-fill">
+				
+			</div>
 		</div>
-		<div class="form-group">
-			<label for="password">Password</label>
-			<input class="form-control" type="password" id="password" name="password" />
-		</div>
-		<button type="submit" class="btn btn-primary">Login</button>
-	</form>
-	<p>You can register <a href="/auth/register.html">here</a> if you don't have an account</p> 
 {{end}}
