@@ -1,0 +1,22 @@
+{{define "content"}}
+		<div class="container">
+			{{template "ld-info" .}}
+			<div class="col-md-9 choose-opt">
+				<h1>Send a message to your community</h1>
+				<form method="post">
+					<label for="photo">Got photo?</label>
+					<input type="file" id="photo" class="half-width">
+					<label for="community">Name of community</label>
+					<input type="text" placeholder="Luckdrum Fanclub" id="community" class="half-width">
+					<label for="headline">Mesage</label>
+					<input type="text" placeholder="New Member" id="headline" class="half-width">
+					<textarea placeholder="Please welcome our new member!" class="half-width text-x"></textarea>
+					<label for="links">Got links?</label>
+					<textarea placeholder="http://luckdrum.com" class="half-width" id="links"></textarea>
+					<label for="send">Send to?</label>
+					<input type="radio" name="send-to" id="send"> Everybody<br>
+					<input type="radio" name="send-to" id="send"> Specified people<br>
+				</form>
+			</div>
+		</div>
+{{end}}
