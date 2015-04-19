@@ -71,7 +71,18 @@ label {
   font-size: 15px; }
 
 .container {
-  padding-top: 50px; }
+  padding-top: 50px;
+  width: 98%; }
+
+.ld-sidebar p {
+  font-size: 17px;
+  text-align: center; }
+
+.ld-sidebar h1 {
+  text-align: center; }
+
+.choose-opt li {
+  list-style: none !important; }
 
 nav .container {
   padding-top: 0px; }
