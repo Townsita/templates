@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-.transition-below, input[type=submit], .luckdrum, nav.nav-left a {
+.transition-below, input[type=submit], .choose-opt li, .luckdrum, nav.nav-left a {
   transition: all 0.5s cubic-bezier(0.61, 0, 0.49, 1) 0s; }
 
 body {
@@ -82,7 +82,16 @@ label {
   text-align: center; }
 
 .choose-opt li {
-  list-style: none !important; }
+  list-style: none !important;
+  font-size: 16px;
+  padding: 3px; }
+
+.choose-opt li:hover {
+  font-size: 20px;
+  padding: 1px; }
+
+.choose-opt li i {
+  padding-right: 5px; }
 
 nav .container {
   padding-top: 0px; }
