@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-.transition-below, input[type=submit], .luckdrum, nav.nav-left a {
+.transition-below, input[type=submit], .input-submit, .card-info .follow, .card .read-more, .choose-opt li, .luckdrum, nav.nav-left a {
   transition: all 0.5s cubic-bezier(0.61, 0, 0.49, 1) 0s; }
 
 body {
@@ -9,9 +9,6 @@ body {
   color: #333;
   font-weight: 400;
   background-color: #FFF; }
-
-label {
-  display: block; }
 
 a {
   color: #EA6C6C;
@@ -37,7 +34,7 @@ input[type=text], input[type=email], input[type=url], input[type=password], inpu
   padding: 8px 12px;
   box-shadow: inset 0px 1px 1px rgba(51, 51, 51, 0.2); }
 
-input[type=submit] {
+input[type=submit], .input-submit, .card-info .follow, .card .read-more {
   background-color: #EA6C6C;
   border: 1px solid #a51818;
   border-radius: 1px;
@@ -45,9 +42,10 @@ input[type=submit] {
   font-size: 15px;
   padding: 5px;
   outline: none !important;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-decoration: none; }
 
-input[type=submit]:hover {
+input[type=submit]:hover, .input-submit:hover, .card-info .follow:hover, .card .read-more:hover {
   background-color: #e75656;
   border: 1px solid #791111;
   border-radius: 1px;
@@ -55,42 +53,61 @@ input[type=submit]:hover {
   font-size: 15px;
   padding: 5px; }
 
-input[type=radio], input[type=checkbox] {
+input[type=radio] {
   height: 15px;
   width: 15px; }
 
 label {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 15px;
-  color: #333; }
+  color: #333;
+  display: block; }
 
 .input-style:focus, input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, input[type=date]:focus, input[type=file]:focus, textarea:focus {
   background-color: #FFF;
   box-shadow: outset 0px 0px 5px rgba(234, 108, 108, 0.5);
   color: #EA6C6C; }
 
-textarea {
-  height: 200px; }
-
-.half-width {
-  width: 500px;
-  display: block; }
-
-input[type=file].half-width {
-  width: 320px; }
-
 .small-input {
   padding: 4px 6px;
   font-size: 15px; }
 
+.text-x {
+  height: 200px;
+  min-width: 200px;
+  max-width: 200px; }
+
 .container {
-  padding-top: 50px; }
+  padding-top: 50px;
+  width: 100%; }
+
+.ld-sidebar p {
+  font-size: 17px;
+  text-align: center; }
+
+.ld-sidebar h1 {
+  text-align: center; }
+
+.choose-opt li {
+  list-style: none !important;
+  font-size: 16px;
+  padding: 3px; }
+
+.choose-opt li:hover {
+  font-size: 20px;
+  padding: 1px; }
+
+.choose-opt li i {
+  padding-right: 5px; }
 
 nav .container {
   padding-top: 0px; }
 
 .full-width {
   width: 100%; }
+
+.half-width {
+  width: 50%; }
 
 .box-shadow, .login-container {
   box-shadow: 0px 0px 5px rgba(234, 108, 108, 0.5) inset; }
@@ -175,3 +192,37 @@ nav.navbar {
 
 .navbar-form input {
   margin: 0px !important; }
+
+.card-row {
+  padding: 20px;
+  background: #FFF; }
+
+.card .card-img {
+  margin: auto 0px; }
+
+.card h2 {
+  font-size: 25px;
+  color: #EA6C6C; }
+
+.card-info img {
+  float: left;
+  margin-right: 20px; }
+
+.card-info {
+  font-size: 17px; }
+
+.card-info p {
+  font-size: 15px; }
+
+.card-info .follow {
+  font-size: 15px;
+  margin-top: 10px;
+  display: inline-block; }
+
+.card {
+  margin-bottom: 70px; }
+
+.card .read-more {
+  font-size: 13px !important;
+  display: inline-block;
+  margin-bottom: 10px; }
