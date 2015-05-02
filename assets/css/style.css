@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-.transition-below, input[type=submit], .input-submit, .card-info .follow, .card .read-more, .choose-opt li, .luckdrum, nav.nav-left a {
+.transition-below, input[type=submit], .input-submit, .follow, .card .read-more, .choose-opt li, .luckdrum, nav.nav-left a {
   transition: all 0.5s cubic-bezier(0.61, 0, 0.49, 1) 0s; }
 
 body {
@@ -34,7 +34,7 @@ input[type=text], input[type=email], input[type=url], input[type=password], inpu
   padding: 8px 12px;
   box-shadow: inset 0px 1px 1px rgba(51, 51, 51, 0.2); }
 
-input[type=submit], .input-submit, .card-info .follow, .card .read-more {
+input[type=submit], .input-submit, .follow, .card .read-more {
   background-color: #EA6C6C;
   border: 1px solid #a51818;
   border-radius: 1px;
@@ -43,9 +43,9 @@ input[type=submit], .input-submit, .card-info .follow, .card .read-more {
   padding: 5px;
   outline: none !important;
   margin-bottom: 10px;
-  text-decoration: none; }
+  text-decoration: none !important; }
 
-input[type=submit]:hover, .input-submit:hover, .card-info .follow:hover, .card .read-more:hover {
+input[type=submit]:hover, .input-submit:hover, .follow:hover, .card .read-more:hover {
   background-color: #e75656;
   border: 1px solid #791111;
   border-radius: 1px;
@@ -73,9 +73,7 @@ label {
   font-size: 15px; }
 
 .text-x {
-  height: 200px;
-  min-width: 200px;
-  max-width: 200px; }
+  height: 200px; }
 
 .container {
   padding-top: 50px;
@@ -104,10 +102,16 @@ nav .container {
   padding-top: 0px; }
 
 .full-width {
-  width: 100%; }
+  width: 800px;
+  display: block; }
 
 .half-width {
-  width: 50%; }
+  width: 400px;
+  display: block; }
+
+input[type=file].half-width {
+  width: 320px;
+  display: block; }
 
 .box-shadow, .login-container {
   box-shadow: 0px 0px 5px rgba(234, 108, 108, 0.5) inset; }
@@ -214,7 +218,7 @@ nav.navbar {
 .card-info p {
   font-size: 15px; }
 
-.card-info .follow {
+.follow {
   font-size: 15px;
   margin-top: 10px;
   display: inline-block; }
@@ -226,3 +230,22 @@ nav.navbar {
   font-size: 13px !important;
   display: inline-block;
   margin-bottom: 10px; }
+
+.sidebar-profil {
+  padding: 20px;
+  font-size: 18px; }
+
+.sidebar-profil p {
+  font-size: 15px; }
+
+.tt-menu {
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid lighter(#EA6C6C, 30%) !important;
+  padding: 2px; }
+
+.tt-suggestion {
+  padding: 2px;
+  padding-left: 12px; }
+
+/*# sourceMappingURL=style.css.map */
