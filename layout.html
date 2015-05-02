@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- Font Awsome -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Luckdrum -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body> <!-- If the sign-in or login page is displayed the body tag needs defined style tag with an background-image eg. style="background-image: url(https://farm4.staticflickr.com/3919/14613145488_50c3d4404e_o_d.jpg);" -->
@@ -22,13 +23,33 @@
         ga('send', 'pageview');
     </script>
     {{ end }}
-
-    {{template "nav" .}}
-
+    <nav class="navbar navbar-fixed-top">
+         <div class="container">
+            <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#"><span class="luckdrum">LuckDrum</span></a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href=""><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href=""><i class="fa fa-pencil"></i> Write a message</a></li>
+                    <li><a href="">Contact</a></li>
+                 </ul>
+                 <ul class="nav pull-right">
+                    <form class="navbar-form navbar-right">
+                        <li><input type="text" name="" placeholder="Search ..." class="small-input"></li>
+                    </form>
+                 </ul>
+            </div><!--/.nav-collapse -->
+         </div>
+    </nav>
     {{template "content" .}}
-
-    {{template "footer" .}}
-    <footer><div class="container">&copy; Luckdrum 2015</div></footer>
+    <footer>
+        <div class="container">&copy; Luckdrum 2015</div>
+    </footer>
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
