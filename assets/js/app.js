@@ -1,5 +1,6 @@
 var cnlVersion = '0.0.2';
 $( document ).ready(function() {
+    // searches for substrings in a query
     var substringMatcher = function(strs) {
           return function findMatches(q, cb) {
                 var matches, substringRegex;
@@ -21,6 +22,8 @@ $( document ).ready(function() {
                 cb(matches);
           };
     };
+
+    // https://github.com/xolf/Code-Bowl/blob/master/names.js
 
     var names = [
         'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Miller',
@@ -44,6 +47,8 @@ $( document ).ready(function() {
         name: 'names',
         source: substringMatcher(names)
     });
-    console.log( 'Luckdrum console v' + cnlVersion + ' loaded successfully');
-    console.log( 'Never insert some code you dont know about');
+
+    // console loaded
+    console.log( 'Luckdrum console v' + cnlVersion + ' loaded successfully' );
+    console.log( '! ! ! Never insert some code you dont know about ! ! ! ');
 });
