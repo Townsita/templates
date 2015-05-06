@@ -38,17 +38,6 @@ $( document ).ready(function() {
         'Cook', 'Rogers', 'Morgan', 'Peterson', 'Cooper', 'Reed', 'Bailey'
     ];
 
-    var getInputData = function(url){
-        return $.ajax({
-            url: url,
-            success: function( data ) {
-                return returnData = data;
-            }
-        });
-    };
-
-    var meta = getInputData($('.typeahead').attr('data'));
-
     $('.typeahead').typeahead({
         hint: true,
         highlight: true,
@@ -56,7 +45,7 @@ $( document ).ready(function() {
     },
     {
         name: 'names',
-        source: names
+        source: substringMatcher(names)
     });
 
     // console loaded
