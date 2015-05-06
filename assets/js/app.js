@@ -1,5 +1,6 @@
 var cnlVersion = '0.0.2';
 $( document ).ready(function() {
+    // searches for substrings in a query
     var substringMatcher = function(strs) {
           return function findMatches(q, cb) {
                 var matches, substringRegex;
@@ -22,6 +23,8 @@ $( document ).ready(function() {
           };
     };
 
+    // https://github.com/xolf/Code-Bowl/blob/master/names.js
+
     var names = [
         'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Miller',
         'Davis', 'Garcia', 'Rodriguez', 'Wilson', 'Martinez', 'Anderson',
@@ -35,6 +38,17 @@ $( document ).ready(function() {
         'Cook', 'Rogers', 'Morgan', 'Peterson', 'Cooper', 'Reed', 'Bailey'
     ];
 
+    var getInputData = function(url){
+        return $.ajax({
+            url: url,
+            success: function( data ) {
+                return returnData = data;
+            }
+        });
+    };
+
+    var meta = getInputData($('.typeahead').attr('data'));
+
     $('.typeahead').typeahead({
         hint: true,
         highlight: true,
@@ -42,8 +56,10 @@ $( document ).ready(function() {
     },
     {
         name: 'names',
-        source: substringMatcher(names)
+        source: names
     });
-    console.log( 'Luckdrum console v' + cnlVersion + ' loaded successfully');
-    console.log( 'Never insert some code you dont know about');
+
+    // console loaded
+    console.log( 'Luckdrum console v' + cnlVersion + ' loaded successfully' );
+    console.log( '! ! ! Never insert some code you dont know about ! ! ! ');
 });
