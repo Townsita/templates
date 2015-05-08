@@ -1,14 +1,19 @@
 var cnlVersion = '0.0.3', returnAjaxData;
 $( document ).ready(function() {
 
+    //The Panel part
+    //Hiding all panels excepted the first one
     $('.panel-show').css('display','none');
     $('#panel-show-1').css('display','block');
 
     $('.panel-pill').click(function(){
+        //Set the clicked pill to activated once
         $('.panel-pill').removeClass('active');
         $(this).addClass('active');
+        //Get the Id which is selected
         panelId = $(this).attr('id');
         panelId = panelId.replace('panel-pill-','');
+        //Hiding all panels excepted the selected one
         $('.panel-show').css('display','none');
         $('#panel-show-' + panelId).css('display','block');
     });
