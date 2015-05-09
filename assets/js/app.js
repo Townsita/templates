@@ -1,4 +1,5 @@
-var cnlVersion = '0.0.3', returnAjaxData;
+var cnlVersion = '0.0.3'
+var returnAjaxData;
 $( document ).ready(function() {
 
     //The Panel part
