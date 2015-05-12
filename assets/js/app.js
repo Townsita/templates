@@ -43,7 +43,7 @@ $( document ).ready(function() {
     };
     
     var getMeta = $.ajax({
-                            async:false,
+                            async: true,
                             url: 'https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json',
                             type:'get',
                             data:{'GetConfig':'YES'},
