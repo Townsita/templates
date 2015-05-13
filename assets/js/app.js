@@ -1,5 +1,24 @@
-var cnlVersion = '0.0.2';
+var cnlVersion = '0.0.3';
+var returnAjaxData;
 $( document ).ready(function() {
+
+    //The Panel part
+    //Hiding all panels excepted the first one
+    $('.panel-show').css('display','none');
+    $('#panel-show-1').css('display','block');
+
+    $('.panel-pill').click(function(){
+        //Set the clicked pill to activated once
+        $('.panel-pill').removeClass('active');
+        $(this).addClass('active');
+        //Get the Id which is selected
+        panelId = $(this).attr('id');
+        panelId = panelId.replace('panel-pill-','');
+        //Hiding all panels excepted the selected one
+        $('.panel-show').css('display','none');
+        $('#panel-show-' + panelId).css('display','block');
+    });
+
     // searches for substrings in a query
     var substringMatcher = function(strs) {
           return function findMatches(q, cb) {
@@ -22,6 +41,14 @@ $( document ).ready(function() {
                 cb(matches);
           };
     };
+    
+    var getMeta = $.ajax({
+                            async: true,
+                            url: 'https://gist.githubusercontent.com/xolf/2fc9efcd1b979d979ae4/raw/1be89cddb2304c1705dfab7ce37bd2963661db10/names.json',
+                            type:'get',
+                            data:{'GetConfig':'YES'},
+                            dataType:"JSON"
+                        }).responseJSON;
 
     // https://github.com/xolf/Code-Bowl/blob/master/names.js
 
